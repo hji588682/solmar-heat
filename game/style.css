@@ -1,0 +1,30 @@
+/* Solmar Heat — page chrome. The game canvas is a fixed 1280x720
+   surface, centred on a dark backdrop and scaled to fit the window. */
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  background: #0c0a12;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#game {
+  display: block;
+  width: min(100vw, calc(100vh * 1280 / 720));
+  height: min(100vh, calc(100vw * 720 / 1280));
+  touch-action: none;
+  cursor: crosshair;
+  background: #1d1428;
+}
+/* Read aloud, never shown: the status line screen readers announce. */
+#status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
